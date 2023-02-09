@@ -1,0 +1,255 @@
+:root{
+    --text-color: #333;
+    --primary-color: #f63f2e;
+    --border-color: #dbdbdb;
+    --star-gold-color: #ffce3e;
+    
+}
+
+*{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 62.5%;
+    line-height: 1.6rem;
+}
+
+/* responsive */
+.grid{
+    width: 1212px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grig__full-width{
+    width: 100%;
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -6px;
+    margin-right: -6px;
+}
+
+.grid__column-2{
+    width: calc(100% / 6);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.grid__column-2-4{
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid__column-10{
+    width: calc(100% / 1.2);
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.f-left{
+    float: left;
+}
+
+.f-right{
+    float: right;
+}
+
+.pb-16{
+    padding-bottom: 8px;
+}
+
+.pt-36{
+    padding-top: 36px;
+}
+
+.ml-4{
+    margin-left: 4px;
+}
+
+.ml-8{
+    margin-left: 8px;
+}
+
+.clear{
+    clear: both;
+}
+
+.btn{
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    min-width: 124px;
+    height: 36px;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn+.btn{
+    margin-left: 8px;
+}
+
+.btn.btn--while{
+    background-color: #fff;
+}
+
+.btn.btn--primary{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn.btn-normal:hover{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn--disabled{
+    opacity: 0.6;
+    cursor: default;
+}
+
+.select-input{
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.select-input__label{
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.select-input__icon{
+    font-size: 1.4rem;
+    color: #777;
+}
+
+/* list option  */
+.select-input:hover .select-input__list{
+    display: block;
+}
+
+.select-input__list{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% - 7px);
+    background-color: #fff;
+    border-radius: 2px;
+    list-style: none;
+    padding-left: 0;
+    display: none;
+    padding: 8px 0;
+    z-index: 1;
+}
+
+.select-input__list::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    top: -10px;
+}
+
+.select-input__item{
+
+}
+
+.select-input__link:hover{
+    color: var(--primary-color);
+}
+
+.select-input__link{
+    text-decoration: none;
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    padding: 8px 16px;
+}/* end list option  */
+
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+@keyframes growth{
+    from{
+        transform: scale(var(--growth-from));
+    }to{
+        transform: scale(var(--growth-to));
+    }
+}
+
+@keyframes headerNotifyGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }to{
+        opacity: 1;
+        transform: scale(1);
+
+    }   
+}
+/*pagination*/
+.pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.pagination-item{
+    margin: 0 12px;
+
+}
+.pagination-item--active .pagination-item_link{
+    color: white;
+    background-color: var(--primary-color);
+}
+.pagination-item--active .pagination-item_link:hover{
+    background-color: #ed5c3f;
+
+}
+.pagination-item_link{
+    display: block;
+    text-decoration: none;
+    font-weight: 300px;
+    font-size: 2rem;
+    color: #939393;
+    min-width: 40px;
+    height:  30px;
+    line-height: 30px;
+    text-align:  center;
+    border-radius: 2px;
+
+}
